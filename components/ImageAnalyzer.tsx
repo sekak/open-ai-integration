@@ -49,6 +49,7 @@ const ImageAnalyzer = () => {
       toast.success("Image analyzed successfully!");
     } catch (err) {
       console.log("Error analyzing image:", err);
+      toast.dismiss();
       toast.error("Failed to analyze image. Please try again.");
     } finally {
       setLoading(false);
