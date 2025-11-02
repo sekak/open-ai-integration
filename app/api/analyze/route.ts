@@ -3,7 +3,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { NextResponse } from "next/server";
 
 // The client gets the API key from the environment variable `GEMINI_API_KEY`.
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBy-3TgK7RFMT84c111tSLvvtAKW_DVmrA" });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 const model = "gemini-2.5-flash";
 
 const responseSchema = {
